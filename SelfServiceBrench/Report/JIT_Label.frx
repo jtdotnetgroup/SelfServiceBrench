@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="06/15/2019 14:49:12" ReportInfo.Modified="06/18/2019 09:49:10" ReportInfo.CreatorVersion="2017.1.16.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+      
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <TableDataSource Name="Table1" ReferenceName="Data.Table1" DataType="System.Int32" Enabled="true">
+      <Column Name="ItemNum" DataType="System.String"/>
+      <Column Name="ItemName" DataType="System.String"/>
+      <Column Name="LotNum" DataType="System.String"/>
+      <Column Name="ProDate" DataType="System.DateTime"/>
+      <Column Name="PrintQty" DataType="System.Decimal"/>
+      <Column Name="QRCode" DataType="System.String"/>
+      <Column Name="LabelNum" DataType="System.String"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="100" PaperHeight="60" LeftMargin="0" TopMargin="0" RightMargin="0" BottomMargin="0" FirstPageSource="15" OtherPagesSource="15">
+    <DataBand Name="Data1" Width="378" Height="226.8" DataSource="Table1">
+      <TextObject Name="Text1" Left="66.15" Top="2.89" Width="245.7" Height="18.9" Border.Lines="Left, Right, Top" Border.Width="0.5" Text="东莞井上产品条码" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text2" Left="66.15" Top="40.57" Width="66.15" Height="18.9" Border.Lines="All" Border.Width="0.5" Text="品番名称" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text3" Left="66.15" Top="21.67" Width="66.15" Height="18.9" Border.Lines="All" Border.Width="0.5" Text="品番代码" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text4" Left="66.15" Top="59.47" Width="66.15" Height="18.9" Border.Lines="All" Border.Width="0.5" Text="Lot No." HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text5" Left="66.15" Top="78.37" Width="66.15" Height="18.9" Border.Lines="All" Border.Width="0.5" Text="生产日期" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text6" Left="226.8" Top="59.47" Width="37.8" Height="18.9" Border.Lines="All" Border.Width="0.5" Text="重量" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text10" Left="132.3" Top="78.37" Width="94.5" Height="18.9" Border.Lines="All" Border.Width="0.5" Text="[Date]" Format="Date" Format.Format="d" VertAlign="Center" Font="宋体, 8pt"/>
+      <TextObject Name="Text12" Left="226.8" Top="21.67" Width="85.05" Height="18.9" Border.Lines="All" Border.Width="0.5" Text="[Table1.LabelNum]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text14" Left="226.8" Top="40.57" Width="85.05" Height="18.9" Border.Lines="All" Border.Width="0.5" VertAlign="Center"/>
+      <BarcodeObject Name="Barcode1" Left="226.8" Top="78.37" Width="85.05" Height="78" Border.Lines="All" Border.Width="0.5" AutoSize="false" Text="[Table1.QRCode]" ShowText="false" AllowExpressions="true" Barcode="QR Code" Barcode.ErrorCorrection="L" Barcode.Encoding="UTF8" Barcode.QuietZone="true"/>
+      <TextObject Name="Text13" Left="66.15" Top="97.27" Width="160.65" Height="18.9" Border.Lines="Left, Right, Top" Border.Width="0.5" VertAlign="Center"/>
+      <TextObject Name="Text16" Left="66.15" Top="116.17" Width="160.65" Height="18.9" Border.Lines="Left, Right" Border.Width="0.5" VertAlign="Center"/>
+      <TextObject Name="Text17" Left="66.15" Top="135.07" Width="160.65" Height="21.3" Border.Lines="Left, Right, Bottom" Border.Width="0.5" VertAlign="Center"/>
+      <TextObject Name="Text7" Left="132.3" Top="21.67" Width="94.5" Height="18.9" Border.Lines="Left, Right, Top" Border.Width="0.5" Text="[Table1.ItemNum]" VertAlign="Center" Font="宋体, 8pt"/>
+      <TextObject Name="Text8" Left="132.3" Top="40.57" Width="94.5" Height="18.9" Border.Lines="Left, Right, Top" Border.Width="0.5" Text="[Table1.ItemName]" VertAlign="Center" Font="宋体, 8pt"/>
+      <TextObject Name="Text9" Left="132.3" Top="59.47" Width="94.5" Height="18.9" Border.Lines="Left, Right, Top" Border.Width="0.5" Text="[Table1.LotNum]" VertAlign="Center" Font="宋体, 8pt"/>
+      <TextObject Name="Text11" Left="264.6" Top="59.47" Width="47.25" Height="18.9" Border.Lines="All" Border.Width="0.5" Text="[Table1.PrintQty]" Format="Number" Format.UseLocale="true" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
+    </DataBand>
+  </ReportPage>
+</Report>

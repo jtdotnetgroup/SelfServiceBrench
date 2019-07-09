@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dictionary>
+  <TableDataSource Name="Products" ReferenceName="NorthWind.Products" DataType="System.Int32" Enabled="true">
+    <Column Name="ProductID" DataType="System.Int32"/>
+    <Column Name="ProductName" DataType="System.String"/>
+    <Column Name="SupplierID" DataType="System.Int32"/>
+    <Column Name="CategoryID" DataType="System.Int32"/>
+    <Column Name="QuantityPerUnit" DataType="System.String"/>
+    <Column Name="UnitPrice" DataType="System.Decimal"/>
+    <Column Name="UnitsInStock" DataType="System.Int16"/>
+    <Column Name="UnitsOnOrder" DataType="System.Int16"/>
+    <Column Name="ReorderLevel" DataType="System.Int16"/>
+    <Column Name="Discontinued" DataType="System.Boolean" BindableControl="CheckBox"/>
+    <Column Name="EAN13" DataType="System.String"/>
+  </TableDataSource>
+</Dictionary>

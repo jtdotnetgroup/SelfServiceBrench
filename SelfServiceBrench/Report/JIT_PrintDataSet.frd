@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dictionary>
+  <TableDataSource Name="Table1" ReferenceName="Data.Table1" DataType="System.Int32" Enabled="true">
+    <Column Name="ItemNum" DataType="System.String"/>
+    <Column Name="ItemName" DataType="System.String"/>
+    <Column Name="LotNum" DataType="System.String"/>
+    <Column Name="ProDate" DataType="System.DateTime"/>
+    <Column Name="PrintQty" DataType="System.Decimal"/>
+    <Column Name="QRCode" DataType="System.String"/>
+    <Column Name="LabelNum" DataType="System.String"/>
+  </TableDataSource>
+</Dictionary>
